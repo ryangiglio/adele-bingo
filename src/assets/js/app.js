@@ -81,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   regenButton.addEventListener('click', function(e) {
     e.preventDefault();
 
+    ga('send', 'event', 'Regenerate', 'click', "Regenerate!");
+    
     generateBingo();
   });
 
@@ -92,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Print the page when one is clicked
     printLinks[i].addEventListener('click', function(e) {
       e.preventDefault();
+
+      ga('send', 'event', 'Print', 'click', this.innerHTML);
 
       window.print();
     });
