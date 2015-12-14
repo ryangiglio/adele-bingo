@@ -24,9 +24,10 @@ var PATHS = {
   ],
   sass: [
     'bower_components/foundation-sites/scss',
-    'bower_components/motion-ui/src/'
+    //'bower_components/motion-ui/src/'
   ],
   javascript: [
+    /*
     'bower_components/jquery/dist/jquery.js',
     'bower_components/what-input/what-input.js',
     'bower_components/foundation-sites/js/foundation.core.js',
@@ -51,6 +52,7 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.tabs.js',
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
+    */
     'src/assets/js/!(app.js)**/*.js',
     'src/assets/js/app.js'
   ]

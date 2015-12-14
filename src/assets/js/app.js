@@ -66,10 +66,12 @@ var regenerateTable = function() {
   }
 }
 
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) { 
   regenerateTable();
 
-  $('#regenerate').on('click', function(e) {
+  var regenButton = document.getElementById('regenerate');
+
+  regenButton.addEventListener('click', function(e) {
     e.preventDefault();
 
     regenerateTable();
