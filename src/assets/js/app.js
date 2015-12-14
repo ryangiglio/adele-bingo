@@ -43,9 +43,12 @@ var songs = [
 // An array to hold the shuffled songs
 var shuffledSongs = shuffle(songs);
 
-var regenerateTable = function() {
+// Regenerate Table function
+var generateBingo = function() {
+  // Get all the squares
   squares = document.getElementsByClassName('square');
 
+  // Loop over them
   for ( var i = 0; i < squares.length; i++ ) {
     square = squares[i];
 
@@ -66,14 +69,18 @@ var regenerateTable = function() {
   }
 }
 
+// When the document is ready
 document.addEventListener("DOMContentLoaded", function(event) { 
-  regenerateTable();
+  // Generate the table
+  generateBingo();
 
+  // Get the regenerate button
   var regenButton = document.getElementById('regenerate');
 
+  // Regenerate the table when the Regen button is clicked
   regenButton.addEventListener('click', function(e) {
     e.preventDefault();
 
-    regenerateTable();
+    generateBingo();
   });
 });
