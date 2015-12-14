@@ -83,4 +83,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     generateBingo();
   });
+
+  // Get all the print links
+  var printLinks = document.getElementsByClassName('print');
+
+  // Loop over the links
+  for ( var i = 0; i < printLinks.length; i++ ) {
+    // Print the page when one is clicked
+    printLinks[i].addEventListener('click', function(e) {
+      e.preventDefault();
+
+      window.print();
+    });
+  }
 });
